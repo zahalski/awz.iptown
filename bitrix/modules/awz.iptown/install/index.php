@@ -52,14 +52,17 @@ class awz_iptown extends CModule
 
     function DoUninstall()
     {
+        $this->deleteAgents();
+        ModuleManager::UnRegisterModule($this->MODULE_ID);
+        return true;
+        /*
         global $APPLICATION, $step;
 
         $step = intval($step);
-        if($step < 2) { //выводим предупреждение
+        if($step < 2) {
             $APPLICATION->IncludeAdminFile(Loc::getMessage('AWZ_IPTOWN_INSTALL_TITLE'), $_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/'. $this->MODULE_ID .'/install/unstep.php');
         }
         elseif($step == 2) {
-            //проверяем условие
             if($_REQUEST['save'] != 'Y' && !isset($_REQUEST['save'])) {
                 $this->UnInstallDB();
             }
@@ -70,7 +73,7 @@ class awz_iptown extends CModule
             ModuleManager::UnRegisterModule($this->MODULE_ID);
 
             return true;
-        }
+        }*/
     }
 
     function InstallDB()
