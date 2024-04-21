@@ -80,3 +80,11 @@ if(\Bitrix\Main\Loader::includeModule('awz.iptown')){
 }
 ```
 <!-- dev-end -->
+
+
+<!-- cl-start -->
+## История версий
+
+https://github.com/zahalski/awz.iptown/blob/master/CHANGELOG.md
+
+<!-- cl-end -->
